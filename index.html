@@ -10,6 +10,7 @@
     <title>Peepal</title>
 
     <!-- <link rel="icon" type="image/x-icon" href="./media/favicon.ico"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -17,45 +18,164 @@
 
 <body>
     <div style="height: 20vh;">
-    <nav class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="./index.html"><img src="./media/logo1.png" alt="" class="logo_img"></a>
+        <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="./index.html"><img src="./media/logo1.png" alt="" class="logo_img"></a>
+                </div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./routes/about.html">About</a></li>
+                        <li><a href="./routes/raah.html">RAAH</a></li>
+                        <li><a href="./routes/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
             </div>
-            <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./routes/about.html">About</a></li>
-                    <li><a href="./routes/raah.html">RAAH</a></li>
-                    <li><a href="./routes/contact.html">Contact</a></li>
-                </ul>
+        </nav>
+    </div>
+
+    <center>
+        <div class="home_container">
+            <div class="cont_left">
+                <center>
+                    <div class="main_content">
+                        <h1>Loren Ipsum </h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit amet consectetur adipisicing
+                            elit.
+                            Officia facere.
+                        </p>
+                    </div>
+                </center>
             </div>
-            <span class="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
+            <div class="cont_right">
+                <div class="img_">
+                    <center>
+                        <img src="./media/CAD__.gif" alt="">
+                    </center>
+                </div>
+            </div>
         </div>
-    </nav>
-</div>
+    </center>
+    <div><img src="./media/leaf_nw.png" alt="leaf nw" class="leaf_nw"></div>
 
-    <div class="container-sm bodyDiv">
-        <div class="header">
-            <div class="imgHeader">
+    <div class="elem1">
+        <img src="./media/elem1.png" alt="">
+    </div>
 
-            </div>
-            <div class="header_info">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur culpa vitae quidem quo sapiente
-                    esse
-                    minima voluptatem, mollitia illo maxime repudiandae beatae veritatis, quasi itaque eius, tenetur
-                    eligendi porro autem.
-                    Eius vero et distinctio rem repudiandae dolor voluptatibus porro, dignissimos mollitia laboriosam
-                    quaerat. Error, quod porro aspernatur neque aliquam facilis rem illo obcaecati harum, delectus
-                    alias,
-                    accusantium accusamus quidem aperiam!</p>
+    <div class="home_abt container">
+        <h2 data-animate-in="up" data-animate-in-delay="200">Lorem Ipsum sit amet</h2>
+        <div>
+            <p data-animate-in="up" data-animate-in-delay="300">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo rerum officia natus doloremque
+                sapiente, alias quo sint nulla eum tempora consectetur aperiam recusandae facilis quaerat officiis
+                perspiciatis modi laudantium! Minus?
+                Quia, ipsum aliquid fuga perferendis totam illo ad corporis delectus cumque quam impedit asperiores
+                repudiandae molestias omnis magnam id. Incidunt doloribus id tenetur fuga enim laborum optio omnis
+                eligendi molestias?
+            </p>
+        </div>
+    </div>
+
+    <div class='fullscreen-block-container'>
+        <div class="centerdiv">
+            <div class="cent_inside">
+                <div class="animation-element slide-left">
+                    <p data-animate-in="left" data-animate-in-delay="300">
+                        <span class="contHead">
+                            <b>Lorem ipsum aliquid fuga</b>
+                        </span>
+                        <br>
+                        <br>
+                        <br>
+                        <span class="contHead_info">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, est? Ipsam aliquam,
+                            voluptates quas facilis vel eum impedit dolores est deserunt voluptatum laborum beatae
+                            sapiente facere. Explicabo necessitatibus deserunt nostrum?
+                        </span>
+                    </p>
+                </div>
+                <div class="animation-element slide-right">
+                    <center>
+                        <div class="rightEle">
+                            <img data-animate-in="right" data-animate-in-delay="300" src="./media/elem2.png">
+                        </div>
+                    </center>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="getInTouch mb-4">
+        <div class="container" data-animate-in="up" data-animate-in-delay="300">
+            <h1 data-animate-in="down" data-animate-in-delay="300">Get in touch</h1>
+            <form action="">
+                <div class="form-group mb-4">
+                    <label for="name">Full name</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                        placeholder="Enter name">
+                </div>
+                <div class="form-group mb-4">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="textbox">Message</label>
+                    <textarea class="form-control" id="textbox" rows="3"
+                        placeholder="Type your message here..."></textarea>
+                </div>
+                <center>
+                    <button type="submit" class="btn btn-success my-1">Submit</button>
+                </center>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <section class="contact-area" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="contact-content text-center">
+                            <a href="./index.html" class="footerLogo">Peepal</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Quis ipsum </p>
+                            <div class="hr"></div>
+                            <h6>12 Somewhere in Christ, bengaluru, Karnataka.</h6>
+                            <h6>+91 2345 6789 12<span>|</span>+91 2345 6789 12</h6>
+                            <div class="contact-social">
+                                <ul>
+                                    <li><a class="hover-target" href=""><i class="fa fa-facebook-f" style="font-size: 30px;"></i></a></li>
+                                    <li><a class="hover-target" href=""><i class="fa fa-linkedin" style="font-size: 30px;"></i></a></li>
+                                    <li><a class="hover-target" href=""><i class="fa fa-github" style="font-size: 30px;"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Copyright &copy; 2023 Peepal All Rights Reserved.
+            </p>
+        </footer>
+    </div>
+
+
+
+
+
+
+
 
 
 
@@ -70,6 +190,96 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <script src="index.js"></script>
+    <script>
+        $(function () {
+
+            var html = $('html');
+            // Detections
+            if (!("ontouchstart" in window)) {
+                html.addClass("noTouch");
+            }
+            if ("ontouchstart" in window) {
+                html.addClass("isTouch");
+            }
+            if ("ontouchstart" in window) {
+                html.addClass("isTouch");
+            }
+            if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+                if (navigator.appVersion.indexOf("Trident") === -1) {
+                    html.addClass("isEDGE");
+                } else {
+                    html.addClass("isIE isIE11");
+                }
+            }
+            if (navigator.appVersion.indexOf("MSIE") !== -1) {
+                html.addClass("isIE");
+            }
+            if (
+                navigator.userAgent.indexOf("Safari") != -1 &&
+                navigator.userAgent.indexOf("Chrome") == -1
+            ) {
+                html.addClass("isSafari");
+            }
+
+            // On Screen
+
+            $.fn.isOnScreen = function () {
+                var elementTop = $(this).offset().top,
+                    elementBottom = elementTop + $(this).outerHeight(),
+                    viewportTop = $(window).scrollTop(),
+                    viewportBottom = viewportTop + $(window).height();
+                return elementBottom > viewportTop && elementTop < viewportBottom;
+            };
+
+            function detection() {
+                for (var i = 0; i < items.length; i++) {
+                    var el = $(items[i]);
+
+                    if (el.isOnScreen()) {
+                        el.addClass("in-view");
+                    } else {
+                        el.removeClass("in-view");
+                    }
+                }
+            }
+
+            var items = document.querySelectorAll(
+                "*[data-animate-in], *[data-detect-viewport]"
+            ),
+                waiting = false,
+                w = $(window);
+
+            w.on("resize scroll", function () {
+                if (waiting) {
+                    return;
+                }
+                waiting = true;
+                detection();
+
+                setTimeout(function () {
+                    waiting = false;
+                }, 100);
+            });
+
+            $(document).ready(function () {
+                setTimeout(function () {
+                    detection();
+                }, 500);
+
+                for (var i = 0; i < items.length; i++) {
+                    var d = 0,
+                        el = $(items[i]);
+                    if (items[i].getAttribute("data-animate-in-delay")) {
+                        d = items[i].getAttribute("data-animate-in-delay") / 1000 + "s";
+                    } else {
+                        d = 0;
+                    }
+                    el.css("transition-delay", d);
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>
