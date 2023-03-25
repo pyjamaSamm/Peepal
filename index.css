@@ -400,7 +400,9 @@
 .btn-success:hover {
     background-color: #a2c538 !important;
 }
-
+.strapSub{
+    font-size: 35px;
+}
 
 
 
@@ -415,7 +417,7 @@ section {
 }
 .footerLogo{
     text-decoration: none;
-    color: #000;
+    color: #243010;
     font-size: 40px;
 }
 .footerLogo:hover{
