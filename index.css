@@ -3,7 +3,6 @@
 .nav {
     width: 100%;
     height: 65px;
-    /* line-height: 65px; */
     text-align: center;
 }
 
@@ -134,7 +133,6 @@
 .navTrigger {
     cursor: pointer;
     width: 30px;
-    /* height: 25px; */
     margin: auto;
     position: absolute;
     right: 30px;
@@ -214,7 +212,7 @@
     text-align: left;
     margin-left: 10px;
     margin-top: 20%;
-    font-size: 77px;
+    font-size: 53px;
     color: #87A330;
 }
 
@@ -238,7 +236,7 @@
     display: block;
     width: 300px;
     opacity: 10%;
-    margin-top: -200px;
+    margin-top: -93px;
 }
 
 .cont_right {
@@ -257,6 +255,12 @@
 @media(max-width: 763px) {
     .home_container {
         flex-direction: column-reverse;
+    }
+    .main_content{
+        margin-left: 10px;
+    }
+    .main_content h1{
+        font-size: 37px;
     }
 }
 
@@ -375,13 +379,6 @@
     }
 }
 
-
-
-
-
-
-
-
 .getInTouch {
     margin-top: 100px;
     width: 100vw;
@@ -401,8 +398,20 @@
     background-color: #a2c538 !important;
 }
 .strapSub{
-    font-size: 35px;
+    font-size: 30px;
+    line-height: 1px;
 }
+@media(max-width:763px){
+    .strapSub{
+        font-size: 20px;
+    }
+    .home_abt h2{
+        font-size: 40px;
+    }
+}
+
+
+
 
 
 
