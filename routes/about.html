@@ -60,14 +60,21 @@
                         <br>The founding members are:
                     </p>
                     <ul>
-                        <li class="mb-2"><span style="font-size: 10px;color: #87A330;">&#9679;</span>&nbsp;&nbsp;&nbsp;Aditya Singh</li>
-                        <li class="mb-2"><span style="font-size: 10px;color: #87A330;">&#9679;</span>&nbsp;&nbsp;&nbsp;Ayush Yadav</li>
-                        <li class="mb-2"><span style="font-size: 10px;color: #87A330;">&#9679;</span>&nbsp;&nbsp;&nbsp;Dhruv Gautam</li>
-                        <li class="mb-2"><span style="font-size: 10px;color: #87A330;">&#9679;</span>&nbsp;&nbsp;&nbsp;Gulafsha Ahmed</li>
-                        <li class="mb-2"><span style="font-size: 10px;color: #87A330;">&#9679;</span>&nbsp;&nbsp;&nbsp;Kisan Gupta</li>
+                        <li class="mb-2"><span
+                                style="font-size: 10px;color: #87A330;">&#9679;</span>&nbsp;&nbsp;&nbsp;Aditya Singh
+                        </li>
+                        <li class="mb-2"><span
+                                style="font-size: 10px;color: #87A330;">&#9679;</span>&nbsp;&nbsp;&nbsp;Ayush Yadav</li>
+                        <li class="mb-2"><span
+                                style="font-size: 10px;color: #87A330;">&#9679;</span>&nbsp;&nbsp;&nbsp;Dhruv Gautam
+                        </li>
+                        <li class="mb-2"><span
+                                style="font-size: 10px;color: #87A330;">&#9679;</span>&nbsp;&nbsp;&nbsp;Gulafsha Ahmed
+                        </li>
+                        <li class="mb-2"><span
+                                style="font-size: 10px;color: #87A330;">&#9679;</span>&nbsp;&nbsp;&nbsp;Kisan Gupta</li>
                     </ul>
                     <p>
-                        We have participated in several 
                     </p>
                 </div>
             </div>
@@ -88,18 +95,15 @@
                     <div class="col-lg-6 offset-lg-3">
                         <div class="contact-content text-center">
                             <a href="./index.html" class="footerLogo">Peepal</a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Quis ipsum </p>
+                            <p>Aiming to provide safer journeys with our smart innovations.</p>
                             <div class="hr"></div>
-                            <h6>12 Somewhere in Christ, Bengaluru, Karnataka.</h6>
-                            <h6>+91 2345 6789 12<span>|</span>+91 2345 6789 12</h6>
+                            <h6>Bengaluru, Karnataka.</h6>
+                            <h6>peepal.142@gmail.com</h6>
                             <div class="contact-social">
                                 <ul>
-                                    <li><a class="hover-target" href=""><i class="fa fa-facebook-f"
-                                                style="font-size: 30px;"></i></a></li>
+                                    <li><a class="hover-target" href="" style="margin-left: -30px;"><i
+                                                class="fa fa-instagram" style="font-size: 30px;"></i></a></li>
                                     <li><a class="hover-target" href=""><i class="fa fa-linkedin"
-                                                style="font-size: 30px;"></i></a></li>
-                                    <li><a class="hover-target" href=""><i class="fa fa-github"
                                                 style="font-size: 30px;"></i></a></li>
                                 </ul>
                             </div>
@@ -122,6 +126,96 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        $(function () {
+
+            var html = $('html');
+            // Detections
+            if (!("ontouchstart" in window)) {
+                html.addClass("noTouch");
+            }
+            if ("ontouchstart" in window) {
+                html.addClass("isTouch");
+            }
+            if ("ontouchstart" in window) {
+                html.addClass("isTouch");
+            }
+            if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+                if (navigator.appVersion.indexOf("Trident") === -1) {
+                    html.addClass("isEDGE");
+                } else {
+                    html.addClass("isIE isIE11");
+                }
+            }
+            if (navigator.appVersion.indexOf("MSIE") !== -1) {
+                html.addClass("isIE");
+            }
+            if (
+                navigator.userAgent.indexOf("Safari") != -1 &&
+                navigator.userAgent.indexOf("Chrome") == -1
+            ) {
+                html.addClass("isSafari");
+            }
+
+            // On Screen
+
+            $.fn.isOnScreen = function () {
+                var elementTop = $(this).offset().top,
+                    elementBottom = elementTop + $(this).outerHeight(),
+                    viewportTop = $(window).scrollTop(),
+                    viewportBottom = viewportTop + $(window).height();
+                return elementBottom > viewportTop && elementTop < viewportBottom;
+            };
+
+            function detection() {
+                for (var i = 0; i < items.length; i++) {
+                    var el = $(items[i]);
+
+                    if (el.isOnScreen()) {
+                        el.addClass("in-view");
+                    } else {
+                        el.removeClass("in-view");
+                    }
+                }
+            }
+
+            var items = document.querySelectorAll(
+                "*[data-animate-in], *[data-detect-viewport]"
+            ),
+                waiting = false,
+                w = $(window);
+
+            w.on("resize scroll", function () {
+                if (waiting) {
+                    return;
+                }
+                waiting = true;
+                detection();
+
+                setTimeout(function () {
+                    waiting = false;
+                }, 100);
+            });
+
+            $(document).ready(function () {
+                setTimeout(function () {
+                    detection();
+                }, 500);
+
+                for (var i = 0; i < items.length; i++) {
+                    var d = 0,
+                        el = $(items[i]);
+                    if (items[i].getAttribute("data-animate-in-delay")) {
+                        d = items[i].getAttribute("data-animate-in-delay") / 1000 + "s";
+                    } else {
+                        d = 0;
+                    }
+                    el.css("transition-delay", d);
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>
