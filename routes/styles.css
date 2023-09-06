@@ -471,7 +471,56 @@ footer p {
 
 
 
+.achmnts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.achmnts h1{
+    margin-bottom: 0;
+}
 
 
 
+.achDiv{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.firstDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.left{
+    width: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.right{
+    width: 49%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+@media(max-width: 992px){
+    .firstDiv{
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+}
+
+.glim img{
+    width: 350px;
+}
